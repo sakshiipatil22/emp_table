@@ -3,11 +3,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
-from . import get_db
+from src.routes.__init import get_db
 from loguru import logger
 from src.db.model import EmployeeInfo, SalaryInfo
 from typing import Optional
-from src.routes.employee import router as emp_router
 
 router = APIRouter()
 
