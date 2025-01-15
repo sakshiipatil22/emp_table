@@ -3,6 +3,9 @@ from uvicorn import run
 from src.routes.all_routes import router
 from src.db.model import init_db
 
+#from src.routes.employee import router as emp_router
+#print(emp_router)
+
 app=FastAPI(title="Employee management System")
 
 @app.on_event("startup")
